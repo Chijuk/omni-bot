@@ -1,0 +1,11 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <InvokeScriptResponse xmlns="http://www.omninet.de/OtWebSvc/v1">
+            <InvokeScriptResult success="true">
+                <Parameters>
+                    <DateTimeVal name="Result">2021-10-20T16:13:48</DateTimeVal>
+                </Parameters>
+            </InvokeScriptResult>
+        </InvokeScriptResponse>
+    </soap:Body>
+</soap:Envelope>

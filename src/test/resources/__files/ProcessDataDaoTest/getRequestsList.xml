@@ -1,0 +1,266 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <GetObjectListResponse xmlns="http://www.omninet.de/OtWebSvc/v1">
+            <GetObjectListResult success="true" errorMsg="" totalNumberResults="18">
+                <Object id="99376079">
+                    <LongIntVal name="Number">13817868</LongIntVal>
+                    <StringVal name="Summary">Тестова заявка</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-01T10:53:43</DateTimeVal>
+                    <NullVal name="State"/>
+                    <ReferenceVal name="ReportingPerson" objectId="45460128"/>
+                    <NullVal name="ObjectType\.ObjectTypeAlias"/>
+                    <StringVal name="Description">Тестова заявка</StringVal>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376074">
+                    <LongIntVal name="Number">13817867</LongIntVal>
+                    <StringVal name="Summary">Поверка весов. С ЛЬВОВ Пасечная ул, 164</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-12T10:08:15</DateTimeVal>
+                    <StringVal name="State">Assigned</StringVal>
+                    <NullVal name="ReportingPerson"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">WORK_ORDER</StringVal>
+                    <StringVal name="Description">Необходима поверка по весам:
+                        Овочі 1. Серийный номер: 11830287
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямОвочі 2. Серийный номер: 11833617
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямРиба. Серийный номер: 11836180
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямОвочі 3. Серийный номер: 11836181
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямКондитерка (цукерки). Серийный номер: 11836183
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямРиба підвісна. Серийный номер: 11836448
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямГастрономія (центр). Серийный номер: 11837977
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (ліва). Серийный номер: 11837981
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямРиба (ліва). Серийный номер: 11837982
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (центр). Серийный номер: 11838349
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямМясо (права). Серийный номер: 11838350
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямПекарня. Серийный номер: 11838369
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (Піца). Серийный номер: 11838370
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямЛавка традицій (ліва). Серийный номер: 11838372
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямМясо (ліва). Серийный номер: 11838374
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (права). Серийный номер: 11838376
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямГастрономія (права). Серийный номер: 11838378
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямОвочі (острів). Серийный номер: 11838379
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямГастрономія (ліва). Серийный номер: 11838380
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямРиба (права). Серийный номер: 11838381
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямЛавка традицій (Права). Серийный номер: 11838382
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиям</StringVal>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376802">
+                    <LongIntVal name="Number">13817871</LongIntVal>
+                    <StringVal name="Summary">Поверка весов. С КИЕВ Петра Калнышевского ул, 2</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-13T10:07:53</DateTimeVal>
+                    <StringVal name="State">Assigned</StringVal>
+                    <NullVal name="ReportingPerson"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">WORK_ORDER</StringVal>
+                    <StringVal name="Description">Необходима поверка по весам:
+                        Bizerba #Рыба. Серийный номер: 1101
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиям</StringVal>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376835">
+                    <LongIntVal name="Number">13817875</LongIntVal>
+                    <StringVal name="Summary">test 1</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-15T17:35:26</DateTimeVal>
+                    <StringVal name="State">Work</StringVal>
+                    <NullVal name="ReportingPerson"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">WORK_ORDER</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376838">
+                    <LongIntVal name="Number">13817876</LongIntVal>
+                    <StringVal name="Summary">test 1.1</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-15T17:41:27</DateTimeVal>
+                    <StringVal name="State">Work</StringVal>
+                    <NullVal name="ReportingPerson"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">WORK_ORDER</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376858">
+                    <LongIntVal name="Number">13817881</LongIntVal>
+                    <StringVal name="Summary">Проверка 3</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-22T16:10:43</DateTimeVal>
+                    <StringVal name="State">Work</StringVal>
+                    <NullVal name="ReportingPerson"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">WORK_ORDER</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376864">
+                    <LongIntVal name="Number">13817882</LongIntVal>
+                    <StringVal name="Summary">new incident</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-26T11:53:25</DateTimeVal>
+                    <StringVal name="State">Registered</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">INCIDENT</StringVal>
+                    <StringVal name="Description">new incident</StringVal>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376075">
+                    <LongIntVal name="Number">13817866</LongIntVal>
+                    <StringVal name="Summary">Заявка на поверку весов</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-12T10:08:14</DateTimeVal>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="47520859"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <StringVal name="Description">Необходима поверка по весам:
+                        Овочі 1. Серийный номер: 11830287
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямОвочі 2. Серийный номер: 11833617
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямРиба. Серийный номер: 11836180
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямОвочі 3. Серийный номер: 11836181
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямКондитерка (цукерки). Серийный номер: 11836183
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиямРиба підвісна. Серийный номер: 11836448
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямГастрономія (центр). Серийный номер: 11837977
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (ліва). Серийный номер: 11837981
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямРиба (ліва). Серийный номер: 11837982
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (центр). Серийный номер: 11838349
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямМясо (права). Серийный номер: 11838350
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямПекарня. Серийный номер: 11838369
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (Піца). Серийный номер: 11838370
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямЛавка традицій (ліва). Серийный номер: 11838372
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямМясо (ліва). Серийный номер: 11838374
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямКулінарія (права). Серийный номер: 11838376
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямГастрономія (права). Серийный номер: 11838378
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямОвочі (острів). Серийный номер: 11838379
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямГастрономія (ліва). Серийный номер: 11838380
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямРиба (права). Серийный номер: 11838381
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиямЛавка традицій (Права). Серийный номер: 11838382
+                        . Тип весов: Bizerba XC (экран 10 дюймов) поиск по наименованиям</StringVal>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376803">
+                    <LongIntVal name="Number">13817870</LongIntVal>
+                    <StringVal name="Summary">Заявка на поверку весов</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-13T10:07:53</DateTimeVal>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="56965621"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <StringVal name="Description">Необходима поверка по весам:
+                        Bizerba #Рыба. Серийный номер: 1101
+                        . Тип весов: Bizerba MC (экран 15 дюймов) поиск по наименованиям</StringVal>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376834">
+                    <LongIntVal name="Number">13817874</LongIntVal>
+                    <StringVal name="Summary">test 1</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-15T17:33:32</DateTimeVal>
+                    <StringVal name="State">InProgress</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376854">
+                    <LongIntVal name="Number">13817877</LongIntVal>
+                    <StringVal name="Summary">Проверка</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-22T14:16:18</DateTimeVal>
+                    <StringVal name="State">Registered</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376843"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376855">
+                    <LongIntVal name="Number">13817878</LongIntVal>
+                    <StringVal name="Summary">Проверка 2</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-22T14:18:26</DateTimeVal>
+                    <StringVal name="State">Registered</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376843"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376856">
+                    <LongIntVal name="Number">13817879</LongIntVal>
+                    <StringVal name="Summary">Проверка 3</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-22T14:33:19</DateTimeVal>
+                    <StringVal name="State">InProgress</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376843"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376857">
+                    <LongIntVal name="Number">13817880</LongIntVal>
+                    <StringVal name="Summary">Проверка 4</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-22T14:35:18</DateTimeVal>
+                    <StringVal name="State">Registered</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376843"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376806">
+                    <LongIntVal name="Number">13817872</LongIntVal>
+                    <StringVal name="Summary">Заявка на створення віртуальної робочої станції</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-04T16:13:46</DateTimeVal>
+                    <StringVal name="State">Closed</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="82343038"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <StringVal name="Description">TEST</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-27T16:13:48</DateTimeVal>
+                </Object>
+                <Object id="99376809">
+                    <LongIntVal name="Number">13817873</LongIntVal>
+                    <StringVal name="Summary">APPR-0001138431 - Заявка на створення віртуальної робочої станції</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="State">ApproveToClosed</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="3054493"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">APPROVAL_REQUEST</StringVal>
+                    <StringVal name="Description">TEST</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-20T16:13:48</DateTimeVal>
+                </Object>
+                <Object id="99376865">
+                    <LongIntVal name="Number">13817883</LongIntVal>
+                    <StringVal name="Summary">new change</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-26T11:54:01</DateTimeVal>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">CHANGE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376866">
+                    <LongIntVal name="Number">13817884</LongIntVal>
+                    <StringVal name="Summary">new change</StringVal>
+                    <NullVal name="DateDeadline"/>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">CHANGE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="100001">
+                    <LongIntVal name="Number">101</LongIntVal>
+                    <StringVal name="Summary">new change</StringVal>
+                    <NullVal name="DateDeadline"/>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="100"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">CHANGE_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="100002">
+                    <LongIntVal name="Number">102</LongIntVal>
+                    <StringVal name="Summary">new incident</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="State">Work</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="101"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">INCIDENT</StringVal>
+                    <StringVal name="Description">new incident description</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-20T16:13:48</DateTimeVal>
+                </Object>
+                <Object id="100003">
+                    <LongIntVal name="Number">103</LongIntVal>
+                    <StringVal name="Summary">new service request</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="State">Work</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="101"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">SERVICE_REQUEST</StringVal>
+                    <StringVal name="Description">new service request description</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-20T16:13:48</DateTimeVal>
+                </Object>
+            </GetObjectListResult>
+        </GetObjectListResponse>
+    </soap:Body>
+</soap:Envelope>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="bot.token"></entry>
+    <entry key="bot.name"></entry>
+    <entry key="ot.url"></entry>
+    <entry key="ot.user"></entry>
+    <entry key="ot.password"></entry>
+    <entry key="ot.profile"></entry>
+</properties>

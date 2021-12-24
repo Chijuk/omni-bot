@@ -1,0 +1,6 @@
+/OmnitrackerBot.iml
+/target/
+/.idea/
+/src/test/resources/logs/
+/.jpb/
+/src/test/resources/test-files/16mb.txt

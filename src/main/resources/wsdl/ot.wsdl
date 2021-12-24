@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.omninet.de/OtWebSvc/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.omninet.de/OtWebSvc/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.omninet.de/OtWebSvc/v1">
+      <s:element name="AddObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Object" type="tns:AddObjectData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddObjectData">
+        <s:sequence>
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="NullVal" type="tns:NullVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoolVal" type="tns:BoolVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ByteVal" type="tns:ByteVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortIntVal" type="tns:ShortIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="LongIntVal" type="tns:LongIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SingleVal" type="tns:SingleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleVal" type="tns:DoubleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeVal" type="tns:DateTimeVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="StringVal" type="tns:StringVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyVal" type="tns:CurrencyVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddedAttachmentsVal" type="tns:AddedAttachmentsVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceVal" type="tns:ReferenceVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceListVal" type="tns:ReferenceListVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceToUserVal" type="tns:ReferenceToUserVal" />
+          </s:choice>
+        </s:sequence>
+        <s:attribute name="folderPath" type="s:string" />
+        <s:attribute name="fieldMapping" type="s:string" />
+        <s:attribute name="saveExFlags" type="s:int" use="required" />
+        <s:attribute name="username" type="s:string" />
+        <s:attribute name="password" type="s:string" />
+      </s:complexType>
+      <s:complexType name="NullVal">
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="BoolVal">
+        <s:simpleContent>
+          <s:extension base="s:boolean">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="ByteVal">
+        <s:simpleContent>
+          <s:extension base="s:unsignedByte">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="ShortIntVal">
+        <s:simpleContent>
+          <s:extension base="s:short">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="LongIntVal">
+        <s:simpleContent>
+          <s:extension base="s:int">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="SingleVal">
+        <s:simpleContent>
+          <s:extension base="s:float">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="DoubleVal">
+        <s:simpleContent>
+          <s:extension base="s:double">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="DateTimeVal">
+        <s:simpleContent>
+          <s:extension base="s:dateTime">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="StringVal">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="CurrencyVal">
+        <s:simpleContent>
+          <s:extension base="s:decimal">
+            <s:attribute name="name" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="AddedAttachmentsVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Attachments" type="tns:ArrayOfAddedAttachment" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfAddedAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AddedAttachment" nillable="true" type="tns:AddedAttachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AddedAttachment">
+        <s:simpleContent>
+          <s:extension base="s:base64Binary">
+            <s:attribute name="link" type="s:boolean" use="required" />
+            <s:attribute name="name" type="s:string" />
+            <s:attribute name="description" type="s:string" />
+            <s:attribute name="url" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="ReferenceVal">
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="objectId" type="s:int" use="required" />
+      </s:complexType>
+      <s:complexType name="ReferenceListVal">
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="objectIds" use="required">
+          <s:simpleType>
+            <s:list itemType="s:int" />
+          </s:simpleType>
+        </s:attribute>
+      </s:complexType>
+      <s:complexType name="ReferenceToUserVal">
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="type" type="tns:ValueType" use="required" />
+        <s:attribute name="Value" type="s:string" />
+      </s:complexType>
+      <s:simpleType name="ValueType">
+        <s:restriction base="s:string">
+          <s:enumeration value="groupname" />
+          <s:enumeration value="userdisplayname" />
+          <s:enumeration value="userloginname" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AddObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddObjectResult" type="tns:AddObjectResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AddObjectResult">
+        <s:attribute name="success" type="s:boolean" use="required" />
+        <s:attribute name="objectId" type="s:int" use="required" />
+        <s:attribute name="errorMsg" type="s:string" />
+      </s:complexType>
+      <s:element name="ModifyObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Object" type="tns:ModifyObjectData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ModifyObjectData">
+        <s:sequence>
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="NullVal" type="tns:NullVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoolVal" type="tns:BoolVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ByteVal" type="tns:ByteVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortIntVal" type="tns:ShortIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="LongIntVal" type="tns:LongIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SingleVal" type="tns:SingleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleVal" type="tns:DoubleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeVal" type="tns:DateTimeVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="StringVal" type="tns:StringVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyVal" type="tns:CurrencyVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="AttachmentModificationsVal" type="tns:AttachmentModificationsVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceVal" type="tns:ReferenceVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceListModificationsVal" type="tns:ReferenceListModificationsVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceToUserVal" type="tns:ReferenceToUserVal" />
+          </s:choice>
+        </s:sequence>
+        <s:attribute name="objectId" type="s:int" use="required" />
+        <s:attribute name="saveExFlags" type="s:int" use="required" />
+        <s:attribute name="username" type="s:string" />
+        <s:attribute name="password" type="s:string" />
+      </s:complexType>
+      <s:complexType name="AttachmentModificationsVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AddedAttachments" type="tns:ArrayOfAddedAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModifiedAttachments" type="tns:ArrayOfModifiedAttachment" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeletedAttachments" type="tns:ArrayOfID" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfModifiedAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ModifiedAttachment" nillable="true" type="tns:ModifiedAttachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ModifiedAttachment">
+        <s:simpleContent>
+          <s:extension base="s:base64Binary">
+            <s:attribute name="attachmentId" type="s:int" use="required" />
+            <s:attribute name="link" type="s:boolean" use="required" />
+            <s:attribute name="name" type="s:string" />
+            <s:attribute name="description" type="s:string" />
+            <s:attribute name="url" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ID" nillable="true" type="tns:ID" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ID">
+        <s:simpleContent>
+          <s:extension base="s:int" />
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="ReferenceListModificationsVal">
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="addedObjectIds" use="required">
+          <s:simpleType>
+            <s:list itemType="s:int" />
+          </s:simpleType>
+        </s:attribute>
+        <s:attribute name="removedObjectIds" use="required">
+          <s:simpleType>
+            <s:list itemType="s:int" />
+          </s:simpleType>
+        </s:attribute>
+      </s:complexType>
+      <s:element name="ModifyObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ModifyObjectResult" type="tns:ModifyObjectResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ModifyObjectResult">
+        <s:attribute name="success" type="s:boolean" use="required" />
+        <s:attribute name="errorMsg" type="s:string" />
+      </s:complexType>
+      <s:element name="RemoveObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObjectID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="UseTrashbin" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IgnoreReferences" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RemoveObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RemoveObjectResult" type="tns:RemoveObjectResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RemoveObjectResult">
+        <s:attribute name="success" type="s:boolean" use="required" />
+        <s:attribute name="errorMsg" type="s:string" />
+      </s:complexType>
+      <s:element name="InvokeScript">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Script" type="tns:InvokeScriptParameters" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InvokeScriptParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Parameters" type="tns:ScriptParameters" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="runAt" type="tns:ScriptExecutionSite" use="required" />
+      </s:complexType>
+      <s:complexType name="ScriptParameters">
+        <s:sequence>
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="NullVal" type="tns:NullVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoolVal" type="tns:BoolVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ByteVal" type="tns:ByteVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortIntVal" type="tns:ShortIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="LongIntVal" type="tns:LongIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SingleVal" type="tns:SingleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleVal" type="tns:DoubleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeVal" type="tns:DateTimeVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="StringVal" type="tns:StringVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyVal" type="tns:CurrencyVal" />
+          </s:choice>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ScriptExecutionSite">
+        <s:restriction base="s:string">
+          <s:enumeration value="Default" />
+          <s:enumeration value="Server" />
+          <s:enumeration value="Client" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="InvokeScriptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InvokeScriptResult" type="tns:InvokeScriptResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="InvokeScriptResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Parameters" type="tns:ScriptParameters" />
+        </s:sequence>
+        <s:attribute name="success" type="s:boolean" use="required" />
+        <s:attribute name="errorMsg" type="s:string" />
+      </s:complexType>
+      <s:element name="GetObjectList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get" type="tns:GetObjectListData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetObjectListData">
+        <s:sequence>
+          <s:choice minOccurs="1" maxOccurs="1">
+            <s:element minOccurs="0" maxOccurs="1" name="Filter" type="tns:Filter" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectIDs" type="tns:ObjectIDs" />
+          </s:choice>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequiredField" type="tns:RequiredField" />
+        </s:sequence>
+        <s:attribute name="folderPath" type="s:string" />
+        <s:attribute name="recursive" type="s:boolean" use="required" />
+        <s:attribute name="getHistory" type="s:boolean" use="required" />
+        <s:attribute name="getNoFields" type="s:boolean" use="required" />
+        <s:attribute name="minimumIndex" type="s:int" use="required" />
+        <s:attribute name="maximumRecords" type="s:int" use="required" />
+      </s:complexType>
+      <s:complexType name="Filter" mixed="true">
+        <s:sequence>
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="NullVal" type="tns:NullVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoolVal" type="tns:BoolVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ByteVal" type="tns:ByteVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortIntVal" type="tns:ShortIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="LongIntVal" type="tns:LongIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SingleVal" type="tns:SingleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleVal" type="tns:DoubleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeVal" type="tns:DateTimeVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="StringVal" type="tns:StringVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyVal" type="tns:CurrencyVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceVal" type="tns:ReferenceVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceToUserVal" type="tns:ReferenceToUserVal" />
+          </s:choice>
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ObjectIDs">
+        <s:attribute name="objectIDs" use="required">
+          <s:simpleType>
+            <s:list itemType="s:int" />
+          </s:simpleType>
+        </s:attribute>
+      </s:complexType>
+      <s:complexType name="RequiredField">
+        <s:simpleContent>
+          <s:extension base="s:string" />
+        </s:simpleContent>
+      </s:complexType>
+      <s:element name="GetObjectListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetObjectListResult" type="tns:GetObjectListResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GetObjectListResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Object" type="tns:ObjectData" />
+        </s:sequence>
+        <s:attribute name="success" type="s:boolean" use="required" />
+        <s:attribute name="errorMsg" type="s:string" />
+        <s:attribute name="totalNumberResults" type="s:int" use="required" />
+      </s:complexType>
+      <s:complexType name="ObjectData">
+        <s:sequence>
+          <s:choice minOccurs="0" maxOccurs="unbounded">
+            <s:element minOccurs="0" maxOccurs="1" name="NullVal" type="tns:NullVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="BoolVal" type="tns:BoolVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ByteVal" type="tns:ByteVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ShortIntVal" type="tns:ShortIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="LongIntVal" type="tns:LongIntVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SingleVal" type="tns:SingleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DoubleVal" type="tns:DoubleVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateTimeVal" type="tns:DateTimeVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="StringVal" type="tns:StringVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrencyVal" type="tns:CurrencyVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="AttachmentsVal" type="tns:AttachmentsVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceVal" type="tns:ReferenceVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceListVal" type="tns:ReferenceListVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReferenceToUserVal" type="tns:ReferenceToUserVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="TimeStampedMemoVal" type="tns:TimeStampedMemoVal" />
+            <s:element minOccurs="0" maxOccurs="1" name="HistoryVal" type="tns:HistoryVal" />
+          </s:choice>
+        </s:sequence>
+        <s:attribute name="id" type="s:int" use="required" />
+      </s:complexType>
+      <s:complexType name="AttachmentsVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Attachments" type="tns:ArrayOfAttachment" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfAttachment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Attachment" nillable="true" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Attachment">
+        <s:simpleContent>
+          <s:extension base="s:base64Binary">
+            <s:attribute name="attachmentId" type="s:int" use="required" />
+            <s:attribute name="link" type="s:boolean" use="required" />
+            <s:attribute name="name" type="s:string" />
+            <s:attribute name="url" type="s:string" />
+            <s:attribute name="description" type="s:string" />
+            <s:attribute name="creationDate" type="s:dateTime" use="required" />
+            <s:attribute name="lastModification" type="s:dateTime" use="required" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="TimeStampedMemoVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Section" type="tns:TimeStampedMemoSection" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="TimeStampedMemoSection">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="date" type="s:dateTime" use="required" />
+            <s:attribute name="user" type="s:string" />
+            <s:attribute name="state" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:complexType name="HistoryVal">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HistoryItem" type="tns:HistoryItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="HistoryItem">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OldValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserField" type="s:string" />
+        </s:sequence>
+        <s:attribute name="action" type="s:int" use="required" />
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:AddObject" />
+  </wsdl:message>
+  <wsdl:message name="AddObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:AddObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyObject" />
+  </wsdl:message>
+  <wsdl:message name="ModifyObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="RemoveObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:RemoveObject" />
+  </wsdl:message>
+  <wsdl:message name="RemoveObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:RemoveObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="InvokeScriptSoapIn">
+    <wsdl:part name="parameters" element="tns:InvokeScript" />
+  </wsdl:message>
+  <wsdl:message name="InvokeScriptSoapOut">
+    <wsdl:part name="parameters" element="tns:InvokeScriptResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetObjectListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetObjectList" />
+  </wsdl:message>
+  <wsdl:message name="GetObjectListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetObjectListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OTWebServiceSoap">
+    <wsdl:operation name="AddObject">
+      <wsdl:input message="tns:AddObjectSoapIn" />
+      <wsdl:output message="tns:AddObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyObject">
+      <wsdl:input message="tns:ModifyObjectSoapIn" />
+      <wsdl:output message="tns:ModifyObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveObject">
+      <wsdl:input message="tns:RemoveObjectSoapIn" />
+      <wsdl:output message="tns:RemoveObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InvokeScript">
+      <wsdl:input message="tns:InvokeScriptSoapIn" />
+      <wsdl:output message="tns:InvokeScriptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectList">
+      <wsdl:input message="tns:GetObjectListSoapIn" />
+      <wsdl:output message="tns:GetObjectListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OTWebServiceSoap" type="tns:OTWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddObject">
+      <soap:operation soapAction="http://www.omninet.de/OtWebSvc/v1/AddObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyObject">
+      <soap:operation soapAction="http://www.omninet.de/OtWebSvc/v1/ModifyObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveObject">
+      <soap:operation soapAction="http://www.omninet.de/OtWebSvc/v1/RemoveObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeScript">
+      <soap:operation soapAction="http://www.omninet.de/OtWebSvc/v1/InvokeScript" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectList">
+      <soap:operation soapAction="http://www.omninet.de/OtWebSvc/v1/GetObjectList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OTWebServiceSoap12" type="tns:OTWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddObject">
+      <soap12:operation soapAction="http://www.omninet.de/OtWebSvc/v1/AddObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyObject">
+      <soap12:operation soapAction="http://www.omninet.de/OtWebSvc/v1/ModifyObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveObject">
+      <soap12:operation soapAction="http://www.omninet.de/OtWebSvc/v1/RemoveObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InvokeScript">
+      <soap12:operation soapAction="http://www.omninet.de/OtWebSvc/v1/InvokeScript" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectList">
+      <soap12:operation soapAction="http://www.omninet.de/OtWebSvc/v1/GetObjectList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OTWebService">
+    <wsdl:port name="OTWebServiceSoap" binding="tns:OTWebServiceSoap">
+      <soap:address location="http://localhost/OtWS/v1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OTWebServiceSoap12" binding="tns:OTWebServiceSoap12">
+      <soap12:address location="http://localhost/OtWS/v1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

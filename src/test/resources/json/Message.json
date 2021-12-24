@@ -1,0 +1,80 @@
+{
+  "message_id": 2353,
+  "from": {
+    "id": 991074615,
+    "is_bot": true,
+    "first_name": "TestOmnitrackerBot",
+    "username": "OTServiceDesk_bot"
+  },
+  "chat": {
+    "id": 430587573,
+    "first_name": "Evgeniy",
+    "last_name": "C",
+    "username": "EvgeniyChumak",
+    "type": "private"
+  },
+  "date": 1606747916,
+  "text": "Вам назначен новый запрос на согласование ARQ-000111. \nКраткая информация по согласованию \nЗаказчик согласования: Чумак Евгений \nТема запроса: Согласование для Telegram \nГоловной объект: [RFC-00002] test \nПредмет согласования: Просьба согласовать [RFC-00002] test не позднее 12/1/2020 6:49:42 PM\nИнформация:\n \nСрок согласования: 12/1/2020 6:49:42 PM \nТребуется голосов: 1 из 1 \n\n🌐 Открыть согласование",
+  "entities": [
+    {
+      "offset": 0,
+      "length": 54,
+      "type": "bold"
+    },
+    {
+      "offset": 55,
+      "length": 35,
+      "type": "bold"
+    },
+    {
+      "offset": 91,
+      "length": 22,
+      "type": "bold"
+    },
+    {
+      "offset": 129,
+      "length": 13,
+      "type": "bold"
+    },
+    {
+      "offset": 170,
+      "length": 16,
+      "type": "bold"
+    },
+    {
+      "offset": 205,
+      "length": 21,
+      "type": "bold"
+    },
+    {
+      "offset": 310,
+      "length": 18,
+      "type": "bold"
+    },
+    {
+      "offset": 351,
+      "length": 18,
+      "type": "bold"
+    },
+    {
+      "offset": 382,
+      "length": 20,
+      "type": "text_link",
+      "url": "https://localhost/support/Login.aspx?lang=ru&guestlogin=1&singleton=2&id=576390"
+    }
+  ],
+  "reply_markup": {
+    "inline_keyboard": [
+      [
+        {
+          "text": "✅ Согласовать",
+          "callback_data": "/approvalVote_approved_576390"
+        },
+        {
+          "text": "❌ Отклонить",
+          "callback_data": "/approvalVote_rejected_576390"
+        }
+      ]
+    ]
+  }
+}

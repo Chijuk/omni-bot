@@ -1,0 +1,15 @@
+{
+  "userUniqueId": 301,
+  "objectUniqueId": 400,
+  "messageBody": "some text",
+  "options": [
+    {
+      "value": "some value 1",
+      "callback": "some callback 1"
+    },
+    {
+      "value": "some value 2",
+      "callback": "some callback 2"
+    }
+  ]
+}

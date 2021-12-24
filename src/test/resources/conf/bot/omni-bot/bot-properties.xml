@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="bot.token">536853835857786786786</entry>
+    <entry key="bot.name">Bot name</entry>
+    <entry key="ot.url">http://localhost:8083/OtWs/v1.asmx</entry>
+    <entry key="ot.user">login</entry>
+    <entry key="ot.password">password</entry>
+    <entry key="ot.profile">Profile name</entry>
+</properties>

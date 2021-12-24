@@ -1,0 +1,6 @@
+{
+  "userUniqueId": 100,
+  "objectUniqueId": 400,
+  "messageBody": "some text",
+  "event": "APPROVAL_NEW"
+}

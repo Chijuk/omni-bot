@@ -1,0 +1,44 @@
+logging:
+  config: "classpath:log4j2.xml"
+  register-shutdown-hook: false
+spring:
+  jpa:
+    open-in-view: off
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    show-sql: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    type: org.apache.tomcat.jdbc.pool.DataSource
+    url: jdbc:mysql://localhost:3306/botdb?serverTimezone=Europe/Kiev&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: password
+    username: username
+    tomcat:
+      max-active: 100
+      max-idle: 100
+      min-idle: 10
+      initial-size: 10
+      max-wait: 10000
+      test-on-borrow: true
+      test-while-idle: true
+      validation-query: "SELECT 1"
+      time-between-eviction-runs-millis: 30000
+      min-evictable-idle-time-millis: 30000
+      remove-abandoned: true
+      remove-abandoned-timeout: 5
+      log-abandoned: true
+      jdbc-interceptors:
+        - org.apache.tomcat.jdbc.pool.interceptor.ConnectionState
+        - org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer
+  banner:
+    location: banner.txt
+server:
+  servlet:
+    context-path: /v1
+  error:
+    whitelabel:
+      enabled: false

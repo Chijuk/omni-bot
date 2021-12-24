@@ -1,0 +1,47 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <GetObjectListResponse xmlns="http://www.omninet.de/OtWebSvc/v1">
+            <GetObjectListResult success="true" errorMsg="" totalNumberResults="1">
+                <Object id="100001">
+                    <LongIntVal name="Number">101</LongIntVal>
+                    <StringVal name="Summary">APPR-0001138431 - Заявка на створення віртуальної робочої станції</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="State">ApproveToClosed</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="3054493"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">APPROVAL_REQUEST</StringVal>
+                    <StringVal name="Description">TEST</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-20T16:13:48</DateTimeVal>
+                    <NullVal name="Comment"/>
+                    <NullVal name="DateApproved"/>
+                    <StringVal name="ApprovalResult">NotVoted</StringVal>
+                </Object>
+                <Object id="100002">
+                    <LongIntVal name="Number">102</LongIntVal>
+                    <StringVal name="Summary">APPR-0001138432 - Заявка на створення віртуальної робочої станції</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="State">ApproveToClosed</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="3054493"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">APPROVAL_REQUEST</StringVal>
+                    <NullVal name="Description"/>
+                    <DateTimeVal name="DateClosed">2021-10-20T16:13:48</DateTimeVal>
+                    <NullVal name="Comment"/>
+                    <DateTimeVal name="DateApproved">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="ApprovalResult">Yes</StringVal>
+                </Object>
+                <Object id="100003">
+                    <LongIntVal name="Number">103</LongIntVal>
+                    <StringVal name="Summary">APPR-0001138433 - Заявка на створення віртуальної робочої станції</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="State">ApproveToClosed</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="3054493"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">APPROVAL_REQUEST</StringVal>
+                    <StringVal name="Description">TEST</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="Comment">Comment on NO result</StringVal>
+                    <DateTimeVal name="DateApproved">2021-10-20T16:13:48</DateTimeVal>
+                    <StringVal name="ApprovalResult">No</StringVal>
+                </Object>
+            </GetObjectListResult>
+        </GetObjectListResponse>
+    </soap:Body>
+</soap:Envelope>

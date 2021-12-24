@@ -1,0 +1,6 @@
+{
+  "userUniqueId": 300,
+  "objectUniqueId": 400,
+  "messageBody": "some text",
+  "event": "SR_SOLUTION_WITH_CONFIRMATION"
+}

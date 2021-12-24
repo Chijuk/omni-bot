@@ -1,0 +1,38 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Body>
+        <GetObjectListResponse xmlns="http://www.omninet.de/OtWebSvc/v1">
+            <GetObjectListResult success="true" errorMsg="" totalNumberResults="2">
+                <Object id="99376865">
+                    <LongIntVal name="Number">13817883</LongIntVal>
+                    <StringVal name="Summary">new change</StringVal>
+                    <DateTimeVal name="DateDeadline">2021-10-26T11:54:01</DateTimeVal>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">INCIDENT</StringVal>
+                    <NullVal name="Description"/>
+                    <NullVal name="DateClosed"/>
+                </Object>
+                <Object id="99376866">
+                    <LongIntVal name="Number">13817884</LongIntVal>
+                    <StringVal name="Summary">new change</StringVal>
+                    <NullVal name="DateDeadline"/>
+                    <StringVal name="State">Assigned</StringVal>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">INCIDENT</StringVal>
+                    <StringVal name="Description">Some description</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-26T11:54:01</DateTimeVal>
+                </Object>
+                <Object id="99376867">
+                    <LongIntVal name="Number">13817884</LongIntVal>
+                    <StringVal name="Summary">new change</StringVal>
+                    <NullVal name="DateDeadline"/>
+                    <NullVal name="State"/>
+                    <ReferenceVal name="ReportingPerson" objectId="99376833"/>
+                    <StringVal name="ObjectType\.ObjectTypeAlias">INCIDENT</StringVal>
+                    <StringVal name="Description">Some description</StringVal>
+                    <DateTimeVal name="DateClosed">2021-10-26T11:54:01</DateTimeVal>
+                </Object>
+            </GetObjectListResult>
+        </GetObjectListResponse>
+    </soap:Body>
+</soap:Envelope>
